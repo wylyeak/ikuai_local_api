@@ -1,5 +1,5 @@
 [build-system]
-requires = [ "setuptools", "setuptools-scm" ]
+requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 # [tool.setuptools.dynamic]
 # version = {attr = "ikuai_local_api.VERSION"}
@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ikuai_api"
 dynamic = ["version"]
-keywords = [ "ikuai","router"]
+keywords = ["ikuai", "router"]
 authors = [
     { name = "loyux", email = "lito0210@outlook.com" }
 ]
@@ -21,11 +21,13 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "requests"
+    "requests>=2.32.3",
+    "rich>=14.0.0",
+    "typer>=0.16.0"
 ]
 
 
 [tool.setuptools_scm]
 
 [project.scripts]
-ikuai_cli = "ikuai_api:cli"
+ikuai_cli = "ikuai_api.ikuai:app"
