@@ -1,5 +1,6 @@
 import base64
 import hashlib
+import os
 
 
 def encode_password(password):
