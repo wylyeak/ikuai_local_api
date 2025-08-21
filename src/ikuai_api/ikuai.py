@@ -42,4 +42,4 @@ def update_ssl(username: str = typer.Option(..., help="用户名", envvar='ROUTE
         'id': 1,
         'key': encode_ssl(privateKey)
     })
-    console.print(r)
+    console.print("证书更新成功")
